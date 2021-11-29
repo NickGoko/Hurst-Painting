@@ -26,7 +26,8 @@ colors_list = [(212, 160, 82), (192, 155, 27), (201, 152, 179), (52, 102, 150), 
                (180, 187, 214),
                (248, 197, 2), (112, 139, 115)]
 
-
+screen = Screen()
+screen.setup(width=800, height=700)
 dots = Turtle()
 dots.speed("fastest")
 # print(dots.pos())
@@ -39,11 +40,12 @@ def random_color():
 
 random_color()
 dots.penup()
+dots.goto(-200, -250)
 dots.hideturtle() 
 number_of_dots = 100
 for dot_count in range(1, number_of_dots + 1):
     # dots.color(random_color())
-    dots.dot(10, random_color())
+    dots.dot(20, random_color())
     dots.forward(50)
     if dot_count % 10 == 0:
         dots.setheading(90)
@@ -54,10 +56,4 @@ for dot_count in range(1, number_of_dots + 1):
 
 
 
-
-
-
-
-screen = Screen()
-screen.screensize(100, 100)
 screen.exitonclick()
